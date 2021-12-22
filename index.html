@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>PAGE TITLE GOES HERE</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="stylesheets/css_reset.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+    integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="app.js"></script>
+</head>
+
+<script id="car-template" type="text/x-handlebars-template">
+  <div class="car">
+    <img src="{{image}}" alt="{{make}} {{model}}">
+    <h4>{{make}} {{model}}</h4>
+    <p>Year: {{year}}</p>
+    <p>Price: ${{price}}</p>
+    <button>Buy</button>
+  </div>
+</script>
+
+<body>
+  <div id="top-header">
+    <h1>Buy Used Cars</h1>
+    <form action="#" id="filter">
+      <label for="make">Make
+        <select name="make" id="make">
+          <option value="all">All</option>
+        </select>
+      </label>
+
+      <label for="model">Model
+        <select name="model" id="model">
+          <option value="all">All</option>
+        </select>
+      </label>
+
+      <label for="Price">Price
+        <select name="price" id="price">
+          <option value="all">All</option>
+        </select>
+      </label>
+
+      <label for="year">Year
+        <select name="year" id="year">
+          <option value="all">Any</option>
+        </select>
+      </label>
+      <input type="submit" value="Filter">
+    </form>
+  </div>
+
+  <div id="cars">
+
+  </div>
+</body>
+
+</html>
